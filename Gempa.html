@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Berita Gempa</title>
+        <link rel="icon" href="https://img.icons8.com/bubbles/2x/file.png">
+        <style>
+            body{
+                background-color: GhostWhite;
+                margin: 1em 5em;
+                font-family: cambria;
+            }
+            hr{
+                border-color: burlywood;
+                border-style: dashed;
+            }
+        </style>
+    </head>
+    <body>
+        <body>
+            <form id="formulir">
+                <table align="center" cellpadding="15" width="60%">
+                   <thead>
+                       <tr bgcolor="PowderBlue">
+                           <th colspan="2">Berita Gempa di Negara Jepang</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr><td>
+                       <script>
+                           class Gempa{
+                                    constructor(no, tanggal, jam, lokasi, skala){
+                                        this.no = no;
+                                        this.tanggal = tanggal;
+                                        this.jam = jam;
+                                        this.lokasi = lokasi;
+                                        this.skala = skala;
+                                }
+                                    dampak(){
+                                        let akibat;
+                                        if(this.skala >=1 && this.skala <= 2) akibat = "Dampaknya Tidak terasa";
+                                        else if(this.skala >= 2 && this.skala <= 4) akibat = "Dampaknya Bangunan Retak-Retak";
+                                        else if(this.skala >= 4 && this.skala <= 6) akibat = "Dampaknya Bangunan Roboh";
+                                        else if(this.skala >= 6) akibat = "Bangunan Roboh dan Berpotensi Tsunami";
+                                        else akibat = "Tidak Gempa";
+                                    
+                                        document.write(`No: ${this.no}
+                                        <br/>Tanggal Gempa: ${this.tanggal}
+                                        <br/>Jam: ${this.jam}
+                                        <br/>Lokasi Gempa: ${this.lokasi}
+                                        <br/>Skala: ${this.skala}
+                                        <br/>Dampak: ${akibat}<hr/>`);
+                                    }
+                                }   
+                                //-----Menciptakan Object-----
+                                    let a = new Gempa(1, '08-03-2022', '03:02', 'Bagian Tengah Prefektur Yamaguchi', 3.4, this.akibat);
+                                    let b = new Gempa(2, '08-03-2022', '02:01', 'Lepas Pantai Prefektur Fukushima', 4, this.akibat);
+                                    let c = new Gempa(3, '07-03-2022', '23:58', 'Daerah Noto di Prefektur Ishikawa', 4.8, this.akibat);
+                                    let d = new Gempa(4, '07-03-2022', '23:25', 'Bagian Selatan Prefektur Chiba', 3.5, this.akibat);
+                                    let e = new Gempa(5, '07-03-2022', '23:06', 'Daerah Noto di Prefektur Ishikawa', 3.7, this.akibat);
+                                    let f = new Gempa(6, '07-03-2022', '17:09', 'Lepas Pantai Tokachi', 4.7, this.akibat);
+                                    let g = new Gempa(7, '07-03-2022', '14:36', 'Daerah Noto di Prefektur Ishikawa', 3.5, this.akibat);
+                                    let h = new Gempa(8, '07-03-2022', '08:34', 'Lepas Pantai Prefektur Miyagi', 4.2, this.akibat);
+                                    let i = new Gempa(9, '07-03-2022', '00:01', 'Bagian Selatan Pedalaman di Prefektur Akita', 3.4, this.akibat);
+                                    let j = new Gempa(10, '06-03-2022', '23:24', 'Lepas Pantai Prefektur Miyagi', 3.8, this.akibat);
+
+                                //-----Mencetak-----
+                                a.dampak(); b.dampak(); c.dampak(); d.dampak(); e.dampak();
+                                f.dampak(); g.dampak(); h.dampak(); i.dampak(); j.dampak();
+                       </script>
+                       </td></tr>
+                   </tbody>
+                   <tfoot>
+                       <tr bgcolor="PowderBlue">
+                            <th colspan="2">Stay Safe!</th>
+                       </tr>
+                   </tfoot>
+                </table>
+            </form>
+    </body>
+</html>

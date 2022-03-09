@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gambar dan Audio Hewan</title>
+        <link rel="icon" href="https://img.icons8.com/bubbles/2x/cat.png">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script>
+        $("document").ready(function () {
+            $("div.bebek").mouseover(function () {
+                $(this).css({
+                    background: "url('img/bebek.jpeg')"
+                });
+                $("div.bebek").click(function () {
+                    $("<audio></audio>").attr({
+                        'src': 'audio/bebek.mp3',
+                        'volume': 3,
+                        'autoplay': 'autoplay'
+                    }).appendTo("body");
+                });
+
+            });
+            $("div.kambing").mouseover(function () {
+                $(this).css({
+                    background: "url('img/kambing1.png')"
+                });
+                $("div.kambing").click(function () {
+                    $("<audio></audio>").attr({
+                        'src': 'audio/kambing.mp3',
+                        'volume': 3,
+                        'autoplay': 'autoplay'
+                    }).appendTo("body");
+                });
+            });
+            $("div.kucing").mouseover(function () {
+                $(this).css({
+                    background: "url('img/kucing.jpeg')"
+                });
+                $("div.kucing").click(function () {
+                    $("<audio></audio>").attr({
+                        'src': 'audio/kucing.mp3',
+                        'volume': 3,
+                        'autoplay': 'autoplay'
+                    }).appendTo("body");
+                });
+            });
+            $("div.kuda").mouseover(function () {
+                $(this).css({
+                    background: "url('img/kuda1.jpg')"
+                });
+                $("div.kuda").click(function () {
+                    $("<audio></audio>").attr({
+                        'src': 'audio/kuda.mp3',
+                        'volume': 3,
+                        'autoplay': 'autoplay'
+                    }).appendTo("body");
+                });
+            });
+            $("div.singa").mouseover(function () {
+                $(this).css({
+                    background: "url('img/singaa.png')"
+                    
+                });
+                $("div.singa").click(function () {
+                    $("<audio></audio>").attr({
+                        'src': 'audio/singa.mp3',
+                        'volume': 3,
+                        'autoplay': 'autoplay'
+                    }).appendTo("body");
+                });
+            });
+        });
+    </script>
+    <style>
+        div {
+            width: 200px;
+            height: 300px;
+            float: left;
+            margin: 10px;
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+
+<body bgcolor="gray">
+    <center><p>Gambar Dan Suara Hewan</p></center>
+    <div>
+        <div class="bebek"></div>
+        <p>Bebek</p>
+    </div>
+    <div>
+        <div class="kambing"></div>
+        <p>Kambing</p>
+    </div>
+    <div>
+        <div class="kucing"></div>
+        <p>Kucing</p>
+    </div>
+    <div>
+        <div class="kuda"></div>
+        <p>Kuda</p>
+    </div>
+    <div>
+        <div class="singa"></div>
+        <p>Singa</p>
+    </div>
+
+</body>
+
+</html>
